@@ -1,0 +1,153 @@
+* {
+  box-sizing: border-box;
+  letter-spacing: 1px;
+}
+
+body {
+  background-color: #f0f0f0;
+}
+
+.card {
+  background-color: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  overflow: hidden;
+  transition: transform 0.3s, box-shadow 0.3s;
+  position: relative;
+  padding-bottom: calc(50px + 1.5rem);
+}
+.card:hover {
+  background-color: #e1f5fe;
+}
+.card-logo {
+  padding: 20px;
+  text-align: center;
+  transition: background-color 0.3s;
+}
+.card-logo img {
+  max-width: 100px;
+  height: 50px;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+.card-content {
+  padding: 20px;
+  transition: background-color 0.3s;
+}
+.card-content h2 {
+  margin: 0 0 10px;
+  font-size: 1.2em;
+  color: #333;
+}
+.card-content p {
+  margin: 0;
+  font-size: 0.9em;
+  color: #666;
+}
+.card-footer {
+  width: 100%;
+  position: absolute;
+  left: auto;
+  bottom: 0;
+  background-color: #fff;
+  padding: 20px;
+  border-top: 1px solid #007bff;
+}
+.card-footer .view-button {
+  width: 100%;
+  padding: 10px 0;
+  background-color: #fff;
+  color: #007bff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.3s;
+}
+.card-footer .view-button:hover {
+  background-color: #007bff;
+  color: #fff;
+  transform: scale(1.1);
+}
+
+@media (min-width: 760px) {
+  .card {
+    width: 300px;
+    min-width: 300px;
+  }
+}
+.filter {
+  background-color: #f0f0f0;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+.filter_companysize {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+}
+.filter_companysize .checkbox-container {
+  margin-right: 10px;
+  margin-bottom: 10px;
+}
+.filter_companysize .checkbox-container .checkbox-label {
+  display: flex;
+  align-items: center;
+}
+.filter_companysize .checkbox-container .checkbox-label input {
+  margin-right: 5px;
+}
+
+@media (min-width: 760px) {
+  .filter-Display {
+    grid-area: filter-Display;
+  }
+  .filter {
+    grid-area: filter;
+  }
+}
+.filter-Display {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.filter-tag {
+  display: flex;
+  margin: 5px;
+  align-items: center;
+  background-color: #007bff;
+  color: #fff;
+  padding: 5px 10px;
+  border-radius: 20px;
+}
+.filter-tag span {
+  margin-right: 5px;
+}
+.filter-tag .close-button {
+  cursor: pointer;
+  margin-left: 5px;
+}
+
+@media (min-width: 760px) {
+  #content {
+    display: grid;
+    grid-template-columns: 1fr 5fr;
+    grid-template-areas: "filter filter-Display" "filter content";
+  }
+  .stories {
+    grid-area: content;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+#content {
+  display: grid;
+}
+
+.stories {
+  padding: 20px;
+  display: grid;
+  gap: 10px;
+}/*# sourceMappingURL=main.css.map */
